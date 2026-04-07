@@ -1,0 +1,58 @@
+{
+  "title": "USB mouse modification",
+  "rules": [
+    {
+      "description": "Map mouse side buttons to Control+Left and Control+Right on VID 14139 PID 4229 only",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button4"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["left_control"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 14139,
+                  "product_id": 4229,
+                  "is_pointing_device": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button5"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["left_control"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "device_if",
+              "identifiers": [
+                {
+                  "vendor_id": 14139,
+                  "product_id": 4229,
+                  "is_pointing_device": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

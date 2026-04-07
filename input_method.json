@@ -1,0 +1,26 @@
+{
+  "title": "Windows input method change",
+  "rules": [
+     {
+       "description": "Map left_option then left_shift to control + space",
+       "manipulators": [
+         {
+           "type": "basic",
+           "from": {
+              "key_code": "left_shift",
+              "modifiers": {
+                "mandatory": ["left_option"],
+                "optional": ["any"]
+              }
+           },
+           "to": [
+             {
+               "key_code": "spacebar",
+               "modifiers": ["left_control"]
+             }
+           ]
+         }
+       ]
+     }
+  ]
+}
