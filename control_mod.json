@@ -63,7 +63,9 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$",
                 "^com\\.googlecode\\.iterm2$",
-                "^com\\.microsoft\\.rdc\\.macos$"
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.microsoft\\.VSCode$",
+                "^com\\.microsoft\\.VSCodeInsiders$"
               ]
             }
           ]
@@ -266,7 +268,9 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$",
                 "^com\\.googlecode\\.iterm2$",
-                "^com\\.microsoft\\.rdc\\.macos$"
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.microsoft\\.VSCode$",
+                "^com\\.microsoft\\.VSCodeInsiders$"
               ]
             }
           ]
