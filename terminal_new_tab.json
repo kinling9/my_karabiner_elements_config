@@ -1,8 +1,8 @@
 {
-  "title": "终端习惯：将 Ctrl+Shift+T 映射为新建标签页",
+  "title": "终端习惯：将 Ctrl+Shift+T 映射为 Command+T",
   "rules": [
     {
-      "description": "在 Terminal 和 iTerm2 中，将 Control+Shift+T 映射为 Command+T (新建标签页)",
+      "description": "在 Terminal 中，将 Control+Shift+T 映射为 Command+T (新建标签页)",
       "manipulators": [
         {
           "type": "basic",
@@ -30,8 +30,7 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.googlecode\\.iterm2$"
+                "^com\\.apple\\.Terminal$"
               ]
             }
           ]
