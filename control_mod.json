@@ -386,7 +386,8 @@
                 "left_control"
               ],
               "optional": [
-                "any"
+                "caps_lock",
+                "shift"
               ]
             }
           },
