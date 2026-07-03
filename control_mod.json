@@ -31,6 +31,7 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$",
                 "^com\\.googlecode\\.iterm2$",
+                "^com\\.mitchellh\\.ghostty$",
                 "^com\\.microsoft\\.rdc\\.macos$"
               ]
             }
@@ -63,6 +64,7 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$",
                 "^com\\.googlecode\\.iterm2$",
+                "^com\\.mitchellh\\.ghostty$",
                 "^com\\.microsoft\\.rdc\\.macos$",
                 "^com\\.microsoft\\.VSCode$",
                 "^com\\.microsoft\\.VSCodeInsiders$"
@@ -98,6 +100,7 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$",
                 "^com\\.googlecode\\.iterm2$",
+                "^com\\.mitchellh\\.ghostty$",
                 "^com\\.microsoft\\.rdc\\.macos$"
               ]
             }
@@ -131,6 +134,7 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$",
                 "^com\\.googlecode\\.iterm2$",
+                "^com\\.mitchellh\\.ghostty$",
                 "^com\\.microsoft\\.rdc\\.macos$"
               ]
             }
@@ -164,6 +168,7 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$",
                 "^com\\.googlecode\\.iterm2$",
+                "^com\\.mitchellh\\.ghostty$",
                 "^com\\.microsoft\\.rdc\\.macos$"
               ]
             }
@@ -197,6 +202,7 @@
               "bundle_identifiers": [
                 "^com\\.apple\\.Terminal$",
                 "^com\\.googlecode\\.iterm2$",
+                "^com\\.mitchellh\\.ghostty$",
                 "^com\\.microsoft\\.rdc\\.macos$"
               ]
             }
@@ -205,7 +211,7 @@
       ]
     },
     {
-      "description": "非终端且非 Windows App 下：Ctrl + Shift + C/V 映射为 Command + C/V",
+      "description": "非 Windows App 下：Ctrl + Shift + C/V 映射为 Command + C/V",
       "manipulators": [
         {
           "type": "basic",
@@ -233,8 +239,6 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.googlecode\\.iterm2$",
                 "^com\\.microsoft\\.rdc\\.macos$"
               ]
             }
@@ -266,80 +270,7 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.googlecode\\.iterm2$",
-                "^com\\.microsoft\\.rdc\\.macos$",
-                "^com\\.microsoft\\.VSCode$",
-                "^com\\.microsoft\\.VSCodeInsiders$"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "终端下：Ctrl + Shift + C/V 映射为复制和粘贴",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "c",
-            "modifiers": {
-              "mandatory": [
-                "left_control",
-                "left_shift"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "c",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.googlecode\\.iterm2$"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "v",
-            "modifiers": {
-              "mandatory": [
-                "left_control",
-                "left_shift"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.googlecode\\.iterm2$"
+                "^com\\.microsoft\\.rdc\\.macos$"
               ]
             }
           ]
@@ -406,6 +337,35 @@
                 "^com\\.google\\.Chrome$",
                 "^com\\.microsoft\\.VSCode$",
                 "^com\\.googlecode\\.iterm2$"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "终端下：鼠标中键 (button3) 映射为 Command + V (粘贴)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button3"
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "^com\\.mitchellh\\.ghostty$"
               ]
             }
           ]
