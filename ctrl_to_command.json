@@ -1,8 +1,8 @@
 {
-  "title": "Windows 习惯全局增强版 (兼容终端)",
+  "title": "Windows 习惯：Ctrl 快捷键映射为 Command（终端与远程桌面除外）",
   "rules": [
     {
-      "description": "非终端且非 Windows App 下：Ctrl + C/V/X/A/Z/S 映射为 Command 对应快捷键",
+      "description": "复制/粘贴/剪切/全选/撤销/保存：Ctrl + C/V/X/A/Z/S 映射为 Command + 对应键（终端、远程桌面除外；Ctrl + V 在 VSCode 中保留给 Vim）",
       "manipulators": [
         {
           "type": "basic",
@@ -211,7 +211,7 @@
       ]
     },
     {
-      "description": "非 Windows App 下：Ctrl + Shift + C/V 映射为 Command + C/V",
+      "description": "终端复制粘贴：Ctrl + Shift + C/V 映射为 Command + C/V（远程桌面除外）",
       "manipulators": [
         {
           "type": "basic",
@@ -278,35 +278,7 @@
       ]
     },
     {
-      "description": "Map Command+L to Control+Command+Q (Lock Screen)",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "l",
-            "modifiers": {
-              "mandatory": [
-                "command"
-              ],
-              "optional": [
-                "any"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "q",
-              "modifiers": [
-                "control",
-                "command"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "Map control + f to cmd + f (Find) in Chrome, VSCode and iTerm2",
+      "description": "页内查找：Ctrl + F 映射为 Command + F（仅 Chrome、VSCode、iTerm2）",
       "manipulators": [
         {
           "type": "basic",
@@ -337,63 +309,6 @@
                 "^com\\.google\\.Chrome$",
                 "^com\\.microsoft\\.VSCode$",
                 "^com\\.googlecode\\.iterm2$"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "终端下：鼠标中键 (button3) 映射为 Command + V (粘贴)",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "pointing_button": "button3"
-          },
-          "to": [
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.googlecode\\.iterm2$",
-                "^com\\.mitchellh\\.ghostty$"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "button3 (中键) 映射为 Ctrl + Shift + V",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "pointing_button": "button3"
-          },
-          "to": [
-            {
-              "key_code": "v",
-              "modifiers": [
-                "left_control",
-                "left_shift"
-              ]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.rdc\\.macos$"
               ]
             }
           ]

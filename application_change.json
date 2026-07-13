@@ -1,8 +1,8 @@
 {
-  "title": "Custom application change rules",
+  "title": "Windows 习惯：Option + Tab 切换应用",
   "rules": [
     {
-      "description": "Option+Tab -> Command+Tab (支持任务切换器以及 Shift 反向切换)",
+      "description": "应用切换：Option + Tab 映射为 Command + Tab（支持任务切换器，Shift 反向切换）",
       "manipulators": [
         {
           "type": "basic",

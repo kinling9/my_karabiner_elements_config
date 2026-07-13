@@ -1,8 +1,8 @@
 {
-  "title": "USB mouse modification (with rdp fix)",
+  "title": "鼠标侧键：前进 / 后退（含远程桌面修正）",
   "rules": [
     {
-      "description": "Map mouse side buttons to Control+Left and Control+Right",
+      "description": "鼠标侧键：button4 / button5 映射为 Ctrl + 右 / 左方向键（非远程桌面下额外补发 Ctrl 抬起，避免修饰键卡住）",
       "manipulators": [
         {
           "type": "basic",

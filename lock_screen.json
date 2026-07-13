@@ -1,16 +1,16 @@
 {
-  "title": "Windows 习惯：Option + Shift 切换输入法",
+  "title": "锁屏习惯：Command + L 锁定屏幕",
   "rules": [
     {
-      "description": "输入法切换：Option + Shift 映射为 Control + 空格",
+      "description": "锁定屏幕：Command + L 映射为 Control + Command + Q",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "left_shift",
+            "key_code": "l",
             "modifiers": {
               "mandatory": [
-                "left_option"
+                "command"
               ],
               "optional": [
                 "any"
@@ -19,9 +19,10 @@
           },
           "to": [
             {
-              "key_code": "spacebar",
+              "key_code": "q",
               "modifiers": [
-                "left_control"
+                "control",
+                "command"
               ]
             }
           ]

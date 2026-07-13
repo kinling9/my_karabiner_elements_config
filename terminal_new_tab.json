@@ -1,8 +1,8 @@
 {
-  "title": "终端习惯：将 Ctrl+Shift+T 映射为 Command+T",
+  "title": "终端习惯：Ctrl + Shift + T 新建标签页",
   "rules": [
     {
-      "description": "在 Terminal 中，将 Control+Shift+T 映射为 Command+T (新建标签页)",
+      "description": "新建标签页：Ctrl + Shift + T 映射为 Command + T（仅 Terminal）",
       "manipulators": [
         {
           "type": "basic",

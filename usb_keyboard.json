@@ -1,8 +1,8 @@
 {
-  "title": "USB keyboard modification",
+  "title": "外接 USB 键盘：Option + 空格 唤出 Spotlight",
   "rules": [
     {
-      "description": "Map Option+Space to Command+Space on USB Dongle device only",
+      "description": "唤出 Spotlight：Option + 空格 映射为 Command + 空格（仅限指定 USB 接收器键盘）",
       "manipulators": [
         {
           "type": "basic",
