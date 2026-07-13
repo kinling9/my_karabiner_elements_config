@@ -371,6 +371,34 @@
           ]
         }
       ]
+    },
+    {
+      "description": "button3 (中键) 映射为 Ctrl + Shift + V",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "pointing_button": "button3"
+          },
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "left_control",
+                "left_shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.rdc\\.macos$"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
